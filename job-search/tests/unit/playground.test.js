@@ -1,10 +1,6 @@
-import { describe, it, expect } from 'vitest';
-import { evenOrOdd } from '@/playground';
+import { evenOrOdd, multiply } from '@/playground';
 
 describe('job search unit testing', () => {
-  it('add two numbers', () => {
-    expect(1 + 1).toBe(2);
-  });
   describe('even or odd', () => {
     describe('when number is even', () => {
       it('indicates even number', () => {
@@ -16,5 +12,11 @@ describe('job search unit testing', () => {
         expect(evenOrOdd(3)).toBe('Odd');
       });
     });
+  });
+});
+
+describe('multiplay test', () => {
+  it('multiplies two numbers', () => {
+    expect(multiply(2, 3)).toBe(6);
   });
 });
