@@ -15,4 +15,17 @@ describe('MainNav test', () => {
     const companyName = screen.getByText('David Careers');
     expect(companyName).toBeInTheDocument();
   });
+  it('displays menu items for nav', () => {
+    render(MainNav);
+    const navMenuItems = screen.getAllByRole('listitem');
+    const navMenuItemsTexts = navMenuItems.map((item) => item.textContent);
+    expect(navMenuItemsTexts).toEqual([
+      'Teams',
+      'Locations',
+      'Life at',
+      'How we hire',
+      'Students',
+      'Jobs',
+    ]);
+  });
 });
