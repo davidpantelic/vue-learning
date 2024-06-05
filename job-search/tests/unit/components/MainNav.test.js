@@ -2,23 +2,25 @@ import { render, screen } from '@testing-library/vue';
 import { userEvent } from '@testing-library/user-event';
 
 import MainNav from '@/components/MainNav.vue';
-import { describe, expect } from 'vitest';
 
 describe('MainNav test', () => {
-  it('displays company name', () => {
+  const renderMainNav = () => {
     render(MainNav, {
-      // use below to overrite data just in testing
-      // data() {
-      //   return {
-      //     company: 'Super',
-      //   };
-      // },
+      global: {
+        stubs: {
+          FontAwesomeIcon: true,
+        },
+      },
     });
+  };
+
+  it('displays company name', () => {
+    renderMainNav();
     const companyName = screen.getByText('David Careers');
     expect(companyName).toBeInTheDocument();
   });
   it('displays menu items for nav', () => {
-    render(MainNav);
+    renderMainNav();
     const navMenuItems = screen.getAllByRole('listitem');
     const navMenuItemsTexts = navMenuItems.map((item) => item.textContent);
     expect(navMenuItemsTexts).toEqual([
@@ -33,7 +35,7 @@ describe('MainNav test', () => {
 
   describe('when user log in', () => {
     it('displays profile picture', async () => {
-      render(MainNav);
+      renderMainNav();
       let profileImage = screen.queryByRole('img', {
         name: /david profile image/i,
       });

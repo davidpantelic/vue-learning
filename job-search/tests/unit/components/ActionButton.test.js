@@ -1,7 +1,6 @@
 import { render, screen } from '@testing-library/vue';
 
 import ActionButton from '@/components/ActionButton.vue';
-import { describe, expect } from 'vitest';
 
 describe('testing action button', () => {
   it('renders text', () => {
