@@ -11,10 +11,26 @@
 // console.log(squares2);
 
 // ? dynamic object keys
-const favoritFood = 'sushi';
+// const favoritFood = 'sushi';
 
-const goodFoods = {
-  [favoritFood]: true,
-};
+// const goodFoods = {
+//   [favoritFood]: true,
+// };
 
-console.log(goodFoods);
+// console.log(goodFoods);
+
+// ? setTimeout, setInterval, clearInterval
+
+// setTimeout(() => {
+//   console.log('test');
+// }, 2000);
+
+// const interval = setInterval(() => {
+//   console.log('test');
+// }, 1000);
+
+// setTimeout(() => {
+//   clearInterval(interval);
+// }, 4000);
+
+// ?
