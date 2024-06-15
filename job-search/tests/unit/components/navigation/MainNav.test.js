@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/vue';
 import { userEvent } from '@testing-library/user-event';
+import { RouterLinkStub } from '@vue/test-utils';
 
 import MainNav from '@/components/navigation/MainNav.vue';
 
@@ -9,6 +10,7 @@ describe('MainNav test', () => {
       global: {
         stubs: {
           FontAwesomeIcon: true,
+          RouterLink: RouterLinkStub,
         },
       },
     });

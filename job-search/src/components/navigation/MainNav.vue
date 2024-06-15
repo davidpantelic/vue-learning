@@ -2,11 +2,11 @@
   <header :class="['w-full', 'text-sm', headerHeightClass]">
     <div class="fixed left-0 top-0 h-16 w-full bg-white">
       <div class="mx-auto flex h-full flex-nowrap border-b border-solid border-brand-grey-1 px-8">
-        <a :href="url" class="flex h-full items-center text-xl">{{ company }}</a>
+        <router-link :to="{ name: 'Home' }" class="flex h-full items-center text-xl">David Careers</router-link>
         <nav class="ml-12 h-full">
           <ul class="flex h-full list-none">
             <li v-for="(menuItem, index) in menuItems" :key="index" class="ml-5 h-full first:ml-0">
-              <a href="" class="flex h-full items-center py-2.5">{{ menuItem }}</a>
+              <router-link to="" class="flex h-full items-center py-2.5">{{ menuItem }}</router-link>
             </li>
           </ul>
         </nav>
@@ -35,8 +35,6 @@ export default {
   },
   data() {
     return {
-      company: 'David Careers',
-      url: 'https://careers.google.com',
       menuItems: [
         'Teams',
         'Locations',
