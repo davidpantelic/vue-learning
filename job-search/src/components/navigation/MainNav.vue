@@ -5,8 +5,8 @@
         <router-link :to="{ name: 'Home' }" class="flex h-full items-center text-xl">David Careers</router-link>
         <nav class="ml-12 h-full">
           <ul class="flex h-full list-none">
-            <li v-for="(menuItem, index) in menuItems" :key="index" class="ml-5 h-full first:ml-0">
-              <router-link to="" class="flex h-full items-center py-2.5">{{ menuItem }}</router-link>
+            <li v-for="menuItem in menuItems" :key="menuItem.text" class="ml-5 h-full first:ml-0">
+              <router-link :to="menuItem.url" class="flex h-full items-center py-2.5">{{ menuItem.text }}</router-link>
             </li>
           </ul>
         </nav>
@@ -36,12 +36,12 @@ export default {
   data() {
     return {
       menuItems: [
-        'Teams',
-        'Locations',
-        'Life at',
-        'How we hire',
-        'Students',
-        'Jobs',
+        { text: 'Teams', url: '/teams' },
+        { text: 'Locations', url: '/' },
+        { text: 'Life at', url: '/' },
+        { text: 'How we hire', url: '/' },
+        { text: 'Students', url: '/' },
+        { text: 'Jobs', url: '/jobs/results' },
       ],
       isLoggedIn: false,
     };

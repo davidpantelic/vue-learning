@@ -18,7 +18,7 @@
 
 <script>
 import TheHeadline from '@/components/jobSearch/TheHeadline.vue';
-import JobSearchForm from '@/components/jobSearch/JobSearchFrom.vue';
+import JobSearchForm from '@/components/jobSearch/JobSearchForm.vue';
 import TheHeroSlide from '@/components/jobSearch/TheHeroSlide.vue';
 
 export default {
