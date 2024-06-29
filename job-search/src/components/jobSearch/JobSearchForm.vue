@@ -50,7 +50,7 @@ export default {
 
 <style scoped>
 form {
-  @apply flex h-12 w-full items-center rounded-3xl border border-solid border-brand-grey-3;
+  @apply border-brand-gray-3 flex h-12 w-full items-center rounded-3xl border border-solid;
 }
 form > div {
   @apply flex h-full flex-1 flex-nowrap text-base font-light;
@@ -62,6 +62,6 @@ label {
   @apply absolute -top-7;
 }
 span {
-  @apply flex h-full items-center border-l border-r border-brand-grey-3 bg-brand-grey-2 px-2;
+  @apply border-brand-gray-3 bg-brand-gray-2 flex h-full items-center border-l border-r px-2;
 }
 </style>

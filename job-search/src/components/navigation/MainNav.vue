@@ -1,7 +1,7 @@
 <template>
   <header :class="['w-full', 'text-sm', headerHeightClass]">
     <div class="fixed left-0 top-0 h-16 w-full bg-white">
-      <div class="mx-auto flex h-full flex-nowrap border-b border-solid border-brand-grey-1 px-8">
+      <div class="border-brand-gray-1 mx-auto flex h-full flex-nowrap border-b border-solid px-8">
         <router-link :to="{ name: 'Home' }" class="flex h-full items-center text-xl">David Careers</router-link>
         <nav class="ml-12 h-full">
           <ul class="flex h-full list-none">
