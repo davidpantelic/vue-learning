@@ -1,10 +1,10 @@
 <template>
-  <h1>{{ name }}</h1>
-  <button @click="someFunction">Click</button>
+  <Navbar msg="test-props" />
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, defineProps } from 'vue';
+import Navbar from './components/Navbar.vue';
 
 const name = ref('Thrift Shop');
 
