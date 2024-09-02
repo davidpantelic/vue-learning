@@ -9,8 +9,11 @@ export default {
       },
       colors: {
         'brand-black': '#081107',
-        'brand-green': '#2cdd0d',
-        'brand-yellow': '#f1fac0'
+        'brand-grey-1': '#4A4A4A',
+        'brand-grey-2': '#D3D3D3',
+        // 'brand-green': '#4CAF50',
+        'brand-green': '#acbc90',
+        'brand-yellow': '#FFF8DC'
       }
     }
   },
