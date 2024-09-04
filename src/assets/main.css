@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 html {
-  scroll-padding-top: 60px;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -30,6 +30,10 @@ p {
 
 a {
   color: inherit;
+}
+
+a.btn {
+  @apply bg-brand-yellow text-brand-black hover:bg-brand-black hover:text-brand-yellow py-2 px-6 rounded-full my-5 transition-all duration-300 border-brand-yellow border-2 text-xl;
 }
 
 header nav,
@@ -64,5 +68,14 @@ div.hp-cover {
 }
 
 div.prod-desc > div {
-  @apply w-1/4 self-stretch flex-grow rounded p-10 bg-white;
+  @apply self-stretch flex-grow rounded p-10 bg-white transition-all duration-500 hover:-translate-y-3 hover:shadow-xl;
+}
+
+.black-text-box {
+  background-image: url('@/assets/images/panic_plast_1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.7);
+  background-attachment: fixed;
 }

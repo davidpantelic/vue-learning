@@ -1,9 +1,8 @@
 <template>
   <header>
     <nav :class="[isScrolling ? 'py-4' : 'py-5 bg-opacity-90']" class="bg-brand-black text-white fixed top-0 w-full flex justify-end px-10 z-50">
-      <RouterLink to="/" :class="[isScrolling ? 'h-20' : 'h-24']" class="absolute top-1 left-3 hover:scale-110">
-        <img src="@/assets/images/logo.png" alt="Panic Plast" class="h-full inline mr-3">
-        <span class="text-2xl relative bottom-3">{{ title }}</span>
+      <RouterLink to="/" :class="[isScrolling ? 'h-28' : 'h-32']" class="absolute top-2 left-3 hover:scale-105">
+        <img src="@/assets/images/panic_plast.png" alt="Panic Plast" class="h-full inline mr-3">
       </RouterLink>
       <ul class="nav-tabs flex items-center gap-5">
         <li v-for="tab in navTabs" :key="tab.name">
@@ -20,16 +19,8 @@
 </template>
 
 <script setup>
-// import { ref } from 'vue';
 import { ref, onMounted, onUnmounted } from 'vue';
 import { RouterLink } from 'vue-router'
-
-defineProps({
-  title: {
-    type: String,
-    default: 'Hello World!'
-  }
-});
 
 const navTabs = [
   {
