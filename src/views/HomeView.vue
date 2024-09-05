@@ -2,7 +2,7 @@
   <main class="bg-brand-green">
     <div class="hp-cover w-full h-screen flex items-center justify-center flex-col bg-fixed bg-brand-black">
       <h1 class="text-white text-center"><span class="block mb-2 text-[1.5em]">{{ actionWord }}</span> proizvodi od plastike</h1>
-      <h2 class="mt-8 text-white uppercase">Panic Plast</h2>
+      <h2 class="mt-5 text-white uppercase">Panic Plast</h2>
       <RouterLink to="/products" class="btn">Katalog proizvoda</RouterLink>
       <button @click="scrollToNextSection()" class="absolute bottom-5 left-1/2 -translate-x-1/2 text-white text-2xl animate-bounce" tabindex="-1" aria-hidden="true"><span class="pi pi-arrow-down"></span><span class="sr-only">Scroll Down to the next section</span></button>
     </div>
