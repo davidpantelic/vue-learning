@@ -41,6 +41,13 @@ header nav a {
   @apply transition-all duration-500;
 }
 
+ul.nav-tabs a.router-link-active {
+  color: #fff8dc;
+}
+ul.nav-tabs a.router-link-active:after {
+  width: 100%;
+}
+
 ul.nav-tabs a:after {
   content: '';
   display: block;
@@ -52,10 +59,6 @@ ul.nav-tabs a:after {
 
 ul.nav-tabs a:hover:after {
   width: 100%;
-}
-
-:is(i, span).pi {
-  line-height: 1.5;
 }
 
 div.hp-cover {

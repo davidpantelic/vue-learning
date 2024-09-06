@@ -4,7 +4,7 @@
       <h1 class="text-white text-center"><span class="block mb-2 text-[1.5em]">{{ actionWord }}</span> proizvodi od plastike</h1>
       <h2 class="mt-5 text-white uppercase">Panic Plast</h2>
       <RouterLink to="/products" class="btn">Katalog proizvoda</RouterLink>
-      <button @click="scrollToNextSection()" class="absolute bottom-5 left-1/2 -translate-x-1/2 text-white text-2xl animate-bounce" tabindex="-1" aria-hidden="true"><span class="pi pi-arrow-down"></span><span class="sr-only">Scroll Down to the next section</span></button>
+      <button @click="scrollToNextSection()" class="absolute bottom-5 left-1/2 -translate-x-1/2 text-white text-2xl animate-bounce" tabindex="-1" aria-hidden="true"><i class="pi pi-arrow-down"></i><span class="sr-only">Scroll Down to the next section</span></button>
     </div>
 
     <div class="prod-desc flex flex-wrap gap-10 justify-between items-center px-5 my-[4%] text-center max-w-[1600px] mx-auto">
