@@ -11,12 +11,12 @@
       </ul>
       <ul class="flex items-center gap-2 ml-5">
         <li v-for="icon in socIcons" :key="icon.name">
-          <a :href="icon.path" :target="icon.target" class="text-xl px-1 flex justify-center items-center hover:text-brand-black hover:bg-brand-yellow rounded"><i :class="icon.class"></i><span class="sr-only">{{ icon.name }}</span></a>
+          <a :href="icon.path" :target="icon.target" class="text-xl p-1 flex justify-center items-center hover:text-brand-black hover:bg-brand-yellow rounded"><i :class="icon.class"></i><span class="sr-only">{{ icon.name }}</span></a>
         </li>
       </ul>
       <div class="language-switch ml-3">
-        <button v-if="locale === 'en'" @click="switchLanguage('sr')"><img class="h-7 w-11 object-cover object-center rounded" src="../assets/images/serbia_flag.jpg" alt="Srpski jezik"></button>
-        <button v-if="locale === 'sr'" @click="switchLanguage('en')"><img class="h-7 w-11 object-cover object-center rounded" src="../assets/images/united_kingdom_flag.jpg" alt="English language"></button>
+        <button v-if="locale === 'en'" @click="switchLanguage('sr')" class="h-full"><img class="h-[24px] w-[35px] object-cover object-center rounded" src="../assets/images/serbia_flag.jpg" alt="Srpski jezik"></button>
+        <button v-if="locale === 'sr'" @click="switchLanguage('en')" class="h-full"><img class="h-[24px] w-[35px] object-cover object-center rounded" src="../assets/images/united_kingdom_flag.jpg" alt="English language"></button>
       </div>
     </nav>
   </header>
@@ -42,6 +42,10 @@ const navTabs = computed(() => [
   {
     name: t('nav.products'),
     path: t('nav.products').replace(" ", "-").toLowerCase()
+  },
+  {
+    name: t('nav.gallery'),
+    path: t('nav.gallery').replace(" ", "-").toLowerCase()
   },
   {
     name: t('nav.about'),
