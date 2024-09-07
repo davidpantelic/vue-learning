@@ -14,18 +14,27 @@
           <a :href="icon.path" :target="icon.target" class="text-xl p-1 flex justify-center items-center hover:text-brand-black hover:bg-brand-yellow rounded"><i :class="icon.class"></i><span class="sr-only">{{ icon.name }}</span></a>
         </li>
       </ul>
-      <div class="language-switch ml-3">
-        <button v-if="locale === 'en'" @click="switchLanguage('sr')" class="h-full"><img class="h-[24px] w-[35px] object-cover object-center rounded" src="../assets/images/serbia_flag.jpg" alt="Srpski jezik"></button>
-        <button v-if="locale === 'sr'" @click="switchLanguage('en')" class="h-full"><img class="h-[24px] w-[35px] object-cover object-center rounded" src="../assets/images/united_kingdom_flag.jpg" alt="English language"></button>
+      <div class="ml-3">
+        <button v-if="locale === 'en'" @click="switchLanguage('sr')" class="h-full rounded border-2 px-1 hover:border-brand-yellow hover:bg-brand-yellow hover:text-brand-black">Srb</button>
+        <button v-if="locale === 'sr'" @click="switchLanguage('en')" class="h-full rounded border-2 px-1 hover:border-brand-yellow hover:bg-brand-yellow hover:text-brand-black">En</button>
       </div>
     </nav>
   </header>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, computed } from 'vue';
-import { RouterLink } from 'vue-router'
+import { ref, onMounted, onUnmounted, computed, watchEffect } from 'vue';
+import { RouterLink, useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n';
+
+const route = useRoute()
+
+// Use watchEffect to track changes in route.query
+watchEffect(() => {
+  if (route.query.lang) {
+    locale.value = route.query.lang;
+  }
+});
 
 const { locale } = useI18n();
 const { t } = useI18n();
