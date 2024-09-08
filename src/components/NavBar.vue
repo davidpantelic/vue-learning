@@ -87,7 +87,7 @@ const socIcons = computed(() => [
   },
   {
     name: t('nav.phone'),
-    path: 'tel:0654441560',
+    path: 'tel:+381654441560',
     target: '_self',
     class: 'pi pi-phone'
   },

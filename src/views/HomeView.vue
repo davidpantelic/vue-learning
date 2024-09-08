@@ -10,18 +10,26 @@
     <div class="prod-desc flex flex-wrap gap-10 justify-between items-center px-5 my-[4%] text-center max-w-[1600px] mx-auto">
       <div class="w-full xl:w-1/4">
         <h2 class="mb-5">{{ t('prod_desc.subtitle_1') }}</h2>
-        <p>{{ t('prod_desc.text_1').replace("[", "<strong>") }}</p>
+        <p v-if="currentLocale === 'sr'">We understand the importance of protecting the environment, which is why we are committed to producing <strong>environmentally friendly</strong> products. Our products are made from non-toxic, recyclable materials, which ensures that they have a minimal impact on the environment.</p>
+
+        <p v-if="currentLocale === 'en'">We understand the importance of protecting the environment, which is why we are committed to producing <strong>environmentally friendly</strong> products. Our products are made from non-toxic, recyclable materials, which ensures that they have a minimal impact on the environment.</p>
       </div>
       <div class="w-full md:w-1/4">
         <h2 class="mb-5">{{ t('prod_desc.subtitle_2') }}</h2>
-        <p>{{ t('prod_desc.text_2') }}</p>
+        <p v-if="currentLocale === 'sr'">We offer a wide range of high-quality plastic products designed to withstand the toughest environmental conditions. Our products, including <strong>reservoirs</strong>, <strong>septic tanks</strong>, <strong>wastewater purifiers</strong>, <strong>pontoons</strong>, (and much more), are made from the most durable and weather-resistant materials available on the market.</p>
+
+        <p v-if="currentLocale === 'en'">We offer a wide range of high-quality plastic products designed to withstand the toughest environmental conditions. Our products, including <strong>reservoirs</strong>, <strong>septic tanks</strong>, <strong>wastewater purifiers</strong>, <strong>pontoons</strong>, (and much more), are made from the most durable and weather-resistant materials available on the market.</p>
       </div>
       <div class="w-full md:w-1/4">
         <h2 class="mb-5">{{ t('prod_desc.subtitle_3') }}</h2>
-        <p>{{ t('prod_desc.text_3') }}</p>
+        <p v-if="currentLocale === 'sr'">Our products are <strong>built to last</strong>, and we are confident that they will exceed your expectations. They are designed to resist harsh weather conditions, and they are also resistant to UV radiation, which ensures that they maintain their appearance and functionality over time.</p>
+
+        <p v-if="currentLocale === 'en'">Our products are <strong>built to last</strong>, and we are confident that they will exceed your expectations. They are designed to resist harsh weather conditions, and they are also resistant to UV radiation, which ensures that they maintain their appearance and functionality over time.</p>
       </div>
       <div class="w-full rounded p-3 bg-white">
-        <p>{{ t('prod_desc.text_4') }}</p>
+        <p v-if="currentLocale === 'sr'">We are committed to providing <strong>our customers</strong> with the best possible service, and we pride ourselves on our quality products and customer support. Whether you are looking for a septic tank for your home, a reservoir for your farm, or a pontoon for your dock, we have the perfect product to meet your needs.</p>
+
+        <p v-if="currentLocale === 'en'">We are committed to providing <strong>our customers</strong> with the best possible service, and we pride ourselves on our quality products and customer support. Whether you are looking for a septic tank for your home, a reservoir for your farm, or a pontoon for your dock, we have the perfect product to meet your needs.</p>
       </div>
     </div>
 
@@ -38,7 +46,8 @@
       </div>
       <div class="w-full lg:w-1/2 flex-grow">
         <h2 class="mb-3">{{ t('about.about_products') }}</h2>
-        <p>{{ t('about.about_products_text') }}</p>
+        <p v-if="currentLocale === 'sr'">Plastic reservoirs, septic tanks, pontoons and other products are made by spiral winding technology of high-density polyethylene (HDPE) and polypropylene (HDPP). Resistant to impacts, aggressive chemicals, suitable for burying partially or completely, and as such represent an ideal and long-term investment. They are practical, easy to manipulate and install, and they guarantee waterproofness and a long-lasting solution, because the material loses only 5% of its properties after 50 years of use. Any plastic product can be fitted with various accessories such as valves, faucets, level indicators, external or internal threaded connections, overflows, inspection openings, chokes, anchoring feet, climbing frames and everything else according to your needs. <br> You can find more details on the <a href="/proizvodi">Products</a> page, where all our products are presented.</p>
+        <p v-if="currentLocale === 'en'">Plastic reservoirs, septic tanks, pontoons and other products are made by spiral winding technology of high-density polyethylene (HDPE) and polypropylene (HDPP). Resistant to impacts, aggressive chemicals, suitable for burying partially or completely, and as such represent an ideal and long-term investment. They are practical, easy to manipulate and install, and they guarantee waterproofness and a long-lasting solution, because the material loses only 5% of its properties after 50 years of use. Any plastic product can be fitted with various accessories such as valves, faucets, level indicators, external or internal threaded connections, overflows, inspection openings, chokes, anchoring feet, climbing frames and everything else according to your needs. <br> You can find more details on the <a href="/proizvodi">Products</a> page, where all our products are presented.</p>
       </div>
     </div>
 
@@ -50,14 +59,16 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, inject } from 'vue';
+import { ref, onMounted, onUnmounted, inject, computed } from 'vue';
 import nextElementInList from '@/utils/nextElementInLIst';
 import { useI18n } from 'vue-i18n';
+
+const { locale } = useI18n();
+const currentLocale = computed(() => locale.value);
 
 const { t } = useI18n();
 
 const myFunction = inject('myFunction');
-
 myFunction('func from parent');
 
 const actionWord = ref(t('cover.actionWord_1'));
