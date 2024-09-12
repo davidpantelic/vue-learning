@@ -30,15 +30,18 @@ const messages = {
       scroll: 'Skroluj na dole do sledece sekcije'
     },
     prod_desc: {
-      subtitle_1: 'Environmentally friendly',
-      subtitle_2: 'Products for home, agriculture, and more',
-      subtitle_3: 'Quality and long-lasting'
+      subtitle_1: 'Ekoloski prihvatljivi',
+      subtitle_2: 'Proizvodi za domacinstva, poljopriveru i drugo',
+      subtitle_3: 'Kvalitet i dugotrajnost'
     },
     about: {
-      about_products: 'About products',
-      our_products: 'High quality',
+      about_products: 'O proizvodima',
+      our_products: 'Visok kvalitet',
       our_products_text:
-        'Our products are made from the highest quality materials and are designed to withstand the toughest environmental conditions. They are also designed to be easy to install and maintain, which ensures that they will last for many years to come.'
+        'Naši proizvodi su napravljeni od najkvalitetnijih materijala i dizajnirani su da izdrže najteže uslove životne sredine. Takođe su dizajnirani da se lako instaliraju i održavaju, što garantuje da će trajati dugi niz godina.',
+      transport: 'Prevoz na vasu adresu',
+      transport_text:
+        'Nudimo vam i prevoz plasticnih proizvoda na vasu adresu. Pored prevoza takodje dobijate i instrukcije kako da montirate ili ukopate rezervoar, septicku jamu ili ponton.'
     }
   },
   // WEBDAK // // // // /// // / / // /// // /
@@ -70,16 +73,8 @@ const messages = {
     },
     prod_desc: {
       subtitle_1: 'Environmentally friendly',
-      text_1:
-        'We understand the importance of protecting the environment, which is why we are committed to producing [environmentally friendly] products. Our products are made from non-toxic, recyclable materials, which ensures that they have a minimal impact on the environment.',
       subtitle_2: 'Products for home, agriculture, and more',
-      text_2:
-        'We offer a wide range of high-quality plastic products designed to withstand the toughest environmental conditions. Our products, including [reservoirs], [septic tanks], [wastewater purifiers], [pontoons], (and much more), are made from the most durable and weather-resistant materials available on the market.',
-      subtitle_3: 'Quality and long-lasting',
-      text_3:
-        'Our products are [built to last], and we are confident that they will exceed your expectations. They are designed to resist harsh weather conditions, and they are also resistant to UV radiation, which ensures that they maintain their appearance and functionality over time.',
-      text_4:
-        'We are committed to providing [our customers] with the best possible service, and we pride ourselves on our quality products and customer support. Whether you are looking for a septic tank for your home, a reservoir for your farm, or a pontoon for your dock, we have the perfect product to meet your needs.'
+      subtitle_3: 'Quality and long-lasting'
     },
     about: {
       about_products: 'About products',
@@ -87,7 +82,10 @@ const messages = {
         'Plastic reservoirs, septic tanks, pontoons and other products are made by spiral winding technology of high-density polyethylene (HDPE) and polypropylene (HDPP). Resistant to impacts, aggressive chemicals, suitable for burying partially or completely, and as such represent an ideal and long-term investment. They are practical, easy to manipulate and install, and they guarantee waterproofness and a long-lasting solution, because the material loses only 5% of its properties after 50 years of use. Any plastic product can be fitted with various accessories such as valves, faucets, level indicators, external or internal threaded connections, overflows, inspection openings, chokes, anchoring feet, climbing frames and everything else according to your needs. /nYou can find more details on the Products page, where all our products are presented.',
       our_products: 'High quality',
       our_products_text:
-        'Our products are made from the highest quality materials and are designed to withstand the toughest environmental conditions. They are also designed to be easy to install and maintain, which ensures that they will last for many years to come.'
+        'Our products are made from the highest quality materials and are designed to withstand the toughest environmental conditions. They are also designed to be easy to install and maintain, which ensures that they will last for many years to come.',
+      transport: 'Delivery to your address',
+      transport_text:
+        'We also offer transportation of plastic products to your address. In addition to transportation, you also receive instructions on how to mount or bury a tank, septic tank or pontoon.'
     }
   }
 }

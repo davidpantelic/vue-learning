@@ -24,10 +24,11 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted, computed, watchEffect } from 'vue';
-import { RouterLink, useRoute } from 'vue-router'
+import { RouterLink, useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n';
 
 const route = useRoute()
+const router = useRouter()
 
 // Use watchEffect to track changes in route.query
 watchEffect(() => {
@@ -40,6 +41,7 @@ const { locale } = useI18n();
 const { t } = useI18n();
 // Function to switch languages
 const switchLanguage = (lang) => {
+  router.push({ query: { lang } });
   locale.value = lang;
 };
 
