@@ -10,7 +10,7 @@
       "short_desc": "Plasticni vertikalni ili stojeci rezervoari mogu biti velike zapremine i primene, mogu biti nadzemni (na svojim stopama) ili ukopani delimicno ili celi.",
       "long_desc": "Plasticni vertikalni ili stojeci rezervoari mogu biti velike zapremine i primene, mogu biti nadzemni (na svojim stopama) ili ukopani delimicno ili celi. Mogu se koristiti za skladistenje raznih tecnosti i supstanci. Od dodataka mogu imati revezije i priključke, dovode, odvode, oduske, ojačenja, nivokaze, merdevine i drugo."
     },
-    "psp": {
+    "psj": {
       "name": "Plasticne septicke jame",
       "short_desc": "Plasticne septicke jame su daleko bolje resenje nego klasicne septicke jame u zemlji.",
       "long_desc": "Plasticne septicke jame su daleko bolje resenje nego klasicne septicke jame u zemlji. Plasticna septicka jama se ukopava u zemlju i ne remeti izgled i daleko je laksa za odrzavanje i praznjenje. Moze biti vertikalna ili horizontalna. Od dodataka moze imati dovodnu cev koja odgovara kanalizacionoj mrezi."
@@ -29,6 +29,21 @@
       "name": "Plasticni pontoni",
       "short_desc": "Plasticni pontoni su najbolja zamena za metalne pontone koji su stetni za vodu i okruzenje.",
       "long_desc": "Plasticni pontoni su najbolja zamena za metalne pontone koji su stetni za vodu i okruzenje. Ekoloski ispravni i otporni na spoljne uticaje i udarce, i kao takvi idealni su za vase splavove, marine i dokove. Laksi su za manipulaciju i odrzavanje."
+    },
+    "pka": {
+      "name": "Plasticni katamarani",
+      "short_desc": "Plasticni katamarani su najbolja zamena za metalne pontone koji su stetni za vodu i okruzenje.",
+      "long_desc": "Plasticni katamarani su najbolja zamena za metalne pontone koji su stetni za vodu i okruzenje. Ekoloski ispravni i otporni na spoljne uticaje i udarce, i kao takvi idealni su za vase splavove, marine i dokove. Laksi su za manipulaciju i odrzavanje."
+    },
+    "ps": {
+      "name": "Plasticni separatori",
+      "short_desc": "Plasticni separatori masti i ulja kako bi odvojili vodu od raznih masti i ulja.",
+      "long_desc": "Plasticni separatori masti i ulja kako bi odvojili vodu od raznih masti i ulja."
+    },
+    "psh": {
+      "name": "Plasticne sahte",
+      "short_desc": "Plasticne sahte su dosta bolje resenje nego tradicionalne betonske i livene sahte, lakse su za odrzavanje, prepravke i popravke.",
+      "long_desc": "Plasticne sahte su dosta bolje resenje nego tradicionalne betonske i livene sahte, lakse su za odrzavanje, prepravke i popravke."
     },
     "pce": {
       "name": "Plasticne cevi",
@@ -53,7 +68,7 @@
       "short_desc": "Plastic vertical or standing tanks can be of large volume and wide application, they can be above ground (on their feet) or partially or completely buried.",
       "long_desc": "Plastic vertical or standing tanks can be of large volume and wide application, they can be above ground (on their feet) or partially or completely buried. They can be used to store various liquids and substances. Accessories can include revisions and connections, inlets, outlets, vents, reinforcements, level indicators, ladders and more."
     },
-    "psp": {
+    "psj": {
       "name": "Plastic septic tanks",
       "short_desc": "Plastic septic tanks are a far better solution than traditional septic tanks in the ground.",
       "long_desc": "Plastic septic tanks are a far better solution than traditional septic tanks in the ground. A plastic septic tank is buried in the ground and does not disturb the appearance and is much easier to maintain and empty. It can be vertical or horizontal. As an accessory, it can have a supply pipe that matches the sewage network."
@@ -72,6 +87,21 @@
       "name": "Plastic pontoons",
       "short_desc": "Plastic pontoons are the best replacement for metal pontoons that are harmful to water and the environment.",
       "long_desc": "Plastic pontoons are the best replacement for metal pontoons that are harmful to water and the environment. Environmentally sound and resistant to external influences and impacts, and as such they are ideal for your rafts, marinas and docks. They are easy to manipulate and maintain."
+    },
+    "pks": {
+      "name": "Plastic catamarans",
+      "short_desc": "Plastic catamarans are the best replacement for metal catamarans that are harmful to water and the environment.",
+      "long_desc": "Plastic catamarans are the best replacement for metal catamarans that are harmful to water and the environment. Environmentally sound and resistant to external influences and impacts, and as such they are ideal for your rafts, marinas and docks. They are easy to manipulate and maintain."
+    },
+    "ps": {
+      "name": "Plastic separators",
+      "short_desc": "Plastic fat and oil separators to separate water from various fats and oils.",
+      "long_desc": "Plastic fat and oil separators to separate water from various fats and oils."
+    },
+    "psh": {
+      "name": "Plasticne Manholes",
+      "short_desc": "Plastic manholes are a much better solution than traditional concrete and cast manholes, they are easier to maintain, modify and repair.",
+      "long_desc": "Plastic manholes are a much better solution than traditional concrete and cast manholes, they are easier to maintain, modify and repair."
     },
     "pce": {
       "name": "Plastic pipes",

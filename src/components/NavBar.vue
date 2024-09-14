@@ -34,6 +34,7 @@ const router = useRouter()
 watchEffect(() => {
   if (route.query.lang) {
     locale.value = route.query.lang;
+    document.documentElement.setAttribute('lang', route.query.lang);
   }
 });
 
@@ -41,6 +42,7 @@ const { locale } = useI18n();
 const { t } = useI18n();
 // Function to switch languages
 const switchLanguage = (lang) => {
+  document.documentElement.setAttribute('lang', lang);
   router.push({ query: { lang } });
   locale.value = lang;
 };

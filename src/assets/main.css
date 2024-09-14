@@ -62,11 +62,11 @@ ul.nav-tabs a:hover:after {
 }
 
 div.hp-cover {
-  background-image: url('@/assets/images/horizontalni_vertikalni_rezervoar.jpg');
+  background-image: url('@/assets/images/products/pc_plasticna_cisterna_5.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.7);
   border-radius: 0 0 50px 50px;
 }
 
@@ -75,7 +75,7 @@ div.prod-desc > div {
 }
 
 .black-text-box {
-  background-image: url('@/assets/images/panic_plast_1.jpg');
+  background-image: url('@/assets/images/products/pvr_plasticni_vertikalni_rezervoari_4.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

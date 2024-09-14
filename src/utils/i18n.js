@@ -34,6 +34,7 @@ const messages = {
       subtitle_2: 'Proizvodi za domacinstva, poljopriveru i drugo',
       subtitle_3: 'Kvalitet i dugotrajnost'
     },
+    top_prods: 'Top 3 proizvoda',
     about: {
       about_products: 'O proizvodima',
       our_products: 'Visok kvalitet',
@@ -76,6 +77,7 @@ const messages = {
       subtitle_2: 'Products for home, agriculture, and more',
       subtitle_3: 'Quality and long-lasting'
     },
+    top_prods: 'Top 3 products',
     about: {
       about_products: 'About products',
       about_products_text:
