@@ -1,23 +1,38 @@
 <template>
   <header>
-    <nav :class="[isScrolling ? 'py-4' : 'py-5 bg-opacity-90']" class="bg-brand-black text-white fixed top-0 w-full flex justify-end px-10 z-50">
-      <RouterLink to="/" :class="[isScrolling ? 'h-28' : 'h-32']" class="absolute top-2 left-3 hover:scale-105">
+    <nav :class="[isScrolling ? 'py-4' : 'py-5 bg-opacity-90']" class="bg-brand-black text-white fixed top-0 w-full flex justify-end px-6 lg:px-10 z-50">
+
+      <RouterLink to="/" :class="[isScrolling ? 'h-28' : 'h-32']" class="absolute top-2 left-3 hover:scale-105 z-10">
         <img src="@/assets/images/panic_plast.png" alt="Panic Plast" class="h-full inline mr-3">
       </RouterLink>
-      <ul class="nav-tabs flex items-center gap-5">
+
+      <ul class="nav-tabs items-center gap-5 hidden lg:flex">
         <li v-for="tab in navTabs" :key="tab.name">
           <RouterLink :to="tab.path" class="text-xl hover:text-brand-yellow">{{ tab.name }}</RouterLink>
         </li>
       </ul>
+
       <ul class="flex items-center gap-2 ml-5">
         <li v-for="icon in socIcons" :key="icon.name">
           <a :href="icon.path" :target="icon.target" class="text-xl p-1 flex justify-center items-center hover:text-brand-black hover:bg-brand-yellow rounded"><i :class="icon.class"></i><span class="sr-only">{{ icon.name }}</span></a>
         </li>
       </ul>
+
       <div class="ml-3">
         <button v-if="locale === 'en'" @click="switchLanguage('sr')" class="h-full rounded border-2 px-1 hover:border-brand-yellow hover:bg-brand-yellow hover:text-brand-black">Srb</button>
         <button v-if="locale === 'sr'" @click="switchLanguage('en')" class="h-full rounded border-2 px-1 hover:border-brand-yellow hover:bg-brand-yellow hover:text-brand-black">En</button>
       </div>
+
+      <button :class="[{ 'collapsed': !isBurgerOpen }]" class="lg:hidden navbar-toggler rounded ml-5 flex flex-col items-center justify-center gap-[3px] border-white border-2 px-2 relative" @click="toggleBurger" :aria-expanded="isBurgerOpen" aria-label="Toggle navigation">
+        <span v-for="index in 3" :key="index" class="w-7 h-[2px] bg-white rounded transition-all duration-300"></span>
+      </button>
+
+      <ul :class="[{ 'bg-opacity-90': !isScrolling }, { 'hidden opacity-0': !isBurgerOpen }]" class="nav-tabs flex flex-col lg:hidden absolute top-full right-0 w-full px-6 pb-2 items-end gap-3 bg-brand-black transition-all duration-500">
+        <li v-for="tab in navTabs" :key="tab.name">
+          <RouterLink :to="tab.path" class="text-xl hover:text-brand-yellow">{{ tab.name }}</RouterLink>
+        </li>
+      </ul>
+
     </nav>
   </header>
 </template>
@@ -108,6 +123,11 @@ const handleScroll = () => {
     }
   }
 };
+
+const isBurgerOpen = ref(false);
+function toggleBurger() {
+  isBurgerOpen.value = !isBurgerOpen.value;
+}
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);

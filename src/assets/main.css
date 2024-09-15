@@ -61,6 +61,28 @@ ul.nav-tabs a:hover:after {
   width: 100%;
 }
 
+/* burger animation */
+button.navbar-toggler span {
+  transform-origin: right center;
+  -webkit-transform-origin: right center;
+}
+button.navbar-toggler:not(.collapsed) span:nth-child(1) {
+  transform: translate(-4px, -4px) rotate(-40deg);
+  -webkit-transform: translate(-4px, -4px) rotate(-40deg);
+}
+button.navbar-toggler:not(.collapsed) span:nth-child(2) {
+  opacity: 0;
+}
+button.navbar-toggler:not(.collapsed) span:nth-child(3) {
+  transform: translate(-4px, 4px) rotate(40deg);
+  -webkit-transform: translate(-4px, 4px) rotate(40deg);
+}
+button.navbar-toggler:focus:not(:focus-visible) {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+/* burger animation end */
+
 div.hp-cover {
   background-image: url('@/assets/images/products/pc_plasticna_cisterna_5.webp');
   background-repeat: no-repeat;
