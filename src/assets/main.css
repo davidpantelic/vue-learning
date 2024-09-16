@@ -38,7 +38,7 @@ a.btn {
 
 header nav,
 header nav a {
-  @apply transition-all duration-500;
+  @apply transition-all;
 }
 
 ul.nav-tabs a.router-link-active {
@@ -67,15 +67,17 @@ button.navbar-toggler span {
   -webkit-transform-origin: right center;
 }
 button.navbar-toggler:not(.collapsed) span:nth-child(1) {
-  transform: translate(-4px, -4px) rotate(-40deg);
-  -webkit-transform: translate(-4px, -4px) rotate(-40deg);
+  transform: translate(-2.5px, -2px) rotate(-40deg);
+  -webkit-transform: translate(-2.5px, -2px) rotate(-40deg);
+  width: 20px;
 }
 button.navbar-toggler:not(.collapsed) span:nth-child(2) {
-  opacity: 0;
+  width: 0;
 }
 button.navbar-toggler:not(.collapsed) span:nth-child(3) {
-  transform: translate(-4px, 4px) rotate(40deg);
-  -webkit-transform: translate(-4px, 4px) rotate(40deg);
+  transform: translate(-2px, 1px) rotate(40deg);
+  -webkit-transform: translate(-2px, 1px) rotate(40deg);
+  width: 20px;
 }
 button.navbar-toggler:focus:not(:focus-visible) {
   box-shadow: none;
@@ -93,7 +95,7 @@ div.hp-cover {
 }
 
 div.prod-desc > div {
-  @apply self-stretch flex-grow rounded p-10 bg-white duration-500 transition-all md:hover:-translate-y-3 md:hover:shadow-xl;
+  @apply self-stretch flex-grow rounded p-10 bg-white transition-all md:hover:-translate-y-3 md:hover:shadow-xl;
 }
 
 .black-text-box {

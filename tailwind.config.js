@@ -14,6 +14,9 @@ export default {
         // 'brand-green': '#4CAF50',
         'brand-green': '#acbc90',
         'brand-yellow': '#FFF8DC'
+      },
+      transitionDuration: {
+        DEFAULT: '500ms'
       }
     }
   },
