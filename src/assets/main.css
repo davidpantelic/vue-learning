@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 html {
-  scroll-padding-top: 80px;
+  scroll-padding-top: 100px;
 }
 
 body {
@@ -25,15 +25,20 @@ h3 {
 }
 
 p {
-  @apply text-base sm:text-lg lg:text-xl;
+  @apply text-base sm:text-lg lg:text-xl my-1;
 }
 
 a {
   color: inherit;
+  text-underline-offset: 3px;
 }
 
 a.btn {
-  @apply bg-brand-yellow text-brand-black hover:bg-brand-black hover:text-brand-yellow py-2 px-6 rounded-full my-5 transition-all duration-300 border-brand-yellow border-2 text-xl;
+  @apply bg-brand-yellow text-brand-black hover:bg-brand-black hover:text-brand-yellow py-2 px-8 rounded-full my-5 transition-all duration-300 border-brand-yellow border-2 text-xl;
+}
+
+a.btn-1 {
+  @apply bg-brand-black text-brand-yellow border-brand-black hover:bg-brand-yellow hover:text-brand-black;
 }
 
 header nav,

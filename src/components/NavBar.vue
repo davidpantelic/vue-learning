@@ -6,17 +6,13 @@
         <img src="@/assets/images/panic_plast.png" alt="Panic Plast" :class="[isScrolling ? 'h-4/5' : 'h-full']" class="inline mr-3 transition-all">
       </RouterLink>
 
-      <ul class="nav-tabs items-center gap-5 hidden lg:flex">
+      <ul class="nav-tabs items-center gap-5 hidden lg:flex mr-5">
         <li v-for="tab in navTabs" :key="tab.name">
           <RouterLink :to="tab.path" class="text-xl hover:text-brand-yellow">{{ tab.name }}</RouterLink>
         </li>
       </ul>
 
-      <ul class="flex items-center gap-2 ml-5 z-50">
-        <li v-for="icon in socIcons" :key="icon.name">
-          <a :href="icon.path" :target="icon.target" class="text-xl p-1 flex justify-center items-center hover:text-brand-black hover:bg-brand-yellow rounded"><i :class="icon.class"></i><span class="sr-only">{{ icon.name }}</span></a>
-        </li>
-      </ul>
+      <SocialIcons />
 
       <div class="ml-3 z-50">
         <button v-if="locale === 'en'" @click="switchLanguage('sr')" class="h-full rounded border-2 px-1 hover:border-brand-yellow hover:bg-brand-yellow hover:text-brand-black">Srb</button>
@@ -43,6 +39,7 @@
 import { ref, onMounted, onUnmounted, computed, watchEffect } from 'vue';
 import { RouterLink, useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n';
+import SocialIcons from './SocialIcons.vue';
 
 const route = useRoute()
 const router = useRouter()
@@ -85,33 +82,6 @@ const navTabs = computed(() => [
     name: t('nav.contact'),
     path: t('nav.contact').replace(" ", "-").toLowerCase()
   }
-]);
-
-const socIcons = computed(() => [
-  {
-    name: t('nav.fb'),
-    path: 'https://www.facebook.com/panicplast/',
-    target: '_blank',
-    class: 'pi pi-facebook'
-  },
-  // {
-  //   name: t('nav.ig'),
-  //   path: 'https://www.instagram.com/panicplast/',
-  //   target: '_blank',
-  //   class: 'pi pi-instagram'
-  // },
-  {
-    name: t('nav.email'),
-    path: 'mailto:panicplast@gmail.com',
-    target: '_self',
-    class: 'pi pi-envelope'
-  },
-  {
-    name: t('nav.phone'),
-    path: 'tel:+381654441560',
-    target: '_self',
-    class: 'pi pi-phone'
-  },
 ]);
 
 const isScrolling = ref(false);

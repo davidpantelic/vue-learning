@@ -7,7 +7,7 @@
       <button @click="scrollToNextSection()" class="absolute bottom-5 left-1/2 -translate-x-1/2 text-white text-2xl animate-bounce" tabindex="-1" aria-hidden="true"><i class="pi pi-arrow-down"></i><span class="sr-only">{{ t('cover.scroll') }}</span></button>
     </div>
 
-    <div class="prod-desc flex flex-wrap gap-10 justify-between items-center px-5 my-[4%] text-center max-w-[1600px] mx-auto">
+    <div class="prod-desc flex flex-wrap gap-5 md:gap-10 justify-between items-center px-5 my-[4%] text-center max-w-[1600px] mx-auto">
       <div class="w-full xl:w-1/4">
         <h2 class="mb-5">{{ t('prod_desc.subtitle_1') }}</h2>
         <p v-if="currentLocale === 'sr'">Razumemo važnost zaštite životne sredine, zbog čega smo posvećeni proizvodnji <strong>ekološki prihvatljivih</strong> proizvoda. Naši proizvodi su napravljeni od netoksičnih materijala koji se mogu reciklirati, što obezbeđuje minimalan uticaj na životnu sredinu.</p>
@@ -48,14 +48,14 @@
       </div>
       <div class="w-full lg:w-1/2 flex-grow">
         <h2 class="mb-3">{{ t('about.about_products') }}</h2>
-        <p v-if="currentLocale === 'sr'">Plastični rezervoari, septičke jame, pontoni i drugi proizvodi izrađuju se tehnologijom spiralnog namotavanja od polietilena visoke gustine (HDPE) i polipropilena (HDPP). Otporan na udarce, agresivne hemikalije, pogodan za delimično ili potpuno ukopavanje i kao takav predstavlja idealnu i dugoročnu investiciju. Praktični su, laki za manipulisanje i ugradnju, a garantuju vodonepropusnost i dugotrajno rešenje, jer materijal gubi samo 5% svojih svojstava nakon 50 godina upotrebe. Svaki plastični proizvod može biti opremljen raznim dodacima kao što su ventili, slavine, pokazivači nivoa, spoljni ili unutrašnji navojni priključci, prelivi, revizioni otvori, prigušnice, nožice za sidrenje, ramovi za penjanje i sve ostalo prema vašim potrebama. <br> Više detalja možete pronaći na stranici <a href="/proizvodi">Proizvodi</a>, gde su predstavljeni svi naši proizvodi.</p>
-        <p v-if="currentLocale === 'en'">Plastic reservoirs, septic tanks, pontoons and other products are made by spiral winding technology of high-density polyethylene (HDPE) and polypropylene (HDPP). Resistant to impacts, aggressive chemicals, suitable for burying partially or completely, and as such represent an ideal and long-term investment. They are practical, easy to manipulate and install, and they guarantee waterproofness and a long-lasting solution, because the material loses only 5% of its properties after 50 years of use. Any plastic product can be fitted with various accessories such as valves, faucets, level indicators, external or internal threaded connections, overflows, inspection openings, chokes, anchoring feet, climbing frames and everything else according to your needs. <br> You can find more details on the <a href="/products">Products</a> page, where all our products are presented.</p>
+        <p v-if="currentLocale === 'sr'">Plastični rezervoari, septičke jame, pontoni i drugi proizvodi izrađuju se tehnologijom spiralnog namotavanja od polietilena visoke gustine (HDPE) i polipropilena (HDPP). Otporan na udarce, agresivne hemikalije, pogodan za delimično ili potpuno ukopavanje i kao takav predstavlja idealnu i dugoročnu investiciju. Praktični su, laki za manipulisanje i ugradnju, a garantuju vodonepropusnost i dugotrajno rešenje, jer materijal gubi samo 5% svojih svojstava nakon 50 godina upotrebe. Svaki plastični proizvod može biti opremljen raznim dodacima kao što su ventili, slavine, pokazivači nivoa, spoljni ili unutrašnji navojni priključci, prelivi, revizioni otvori, prigušnice, nožice za sidrenje, ramovi za penjanje i sve ostalo prema vašim potrebama. <br> Pogledajte <a href="/galerija" class="text-white hover:underline">Galeriju</a> naših proizvoda.</p>
+        <p v-if="currentLocale === 'en'">Plastic reservoirs, septic tanks, pontoons and other products are made by spiral winding technology of high-density polyethylene (HDPE) and polypropylene (HDPP). Resistant to impacts, aggressive chemicals, suitable for burying partially or completely, and as such represent an ideal and long-term investment. They are practical, easy to manipulate and install, and they guarantee waterproofness and a long-lasting solution, because the material loses only 5% of its properties after 50 years of use. Any plastic product can be fitted with various accessories such as valves, faucets, level indicators, external or internal threaded connections, overflows, inspection openings, chokes, anchoring feet, climbing frames and everything else according to your needs. <br> Check out the <a href="/gallery" class="text-white hover:underline">Gallery</a> of our products.</p>
       </div>
     </div>
 
-    <div class="w-full h-[500px] my-[4%] inline-block">
-      <img src="@/assets/images/panic_plast.png" alt="Panic Plast" class="w-auto h-full object-contain mx-auto">
-    </div>
+    <img src="@/assets/images/panic_plast.png" :alt="[t('head.title'), t('head.job')]" class="w-auto h-[40vh] max-h-80 my-5 mx-auto">
+
+    <BigFooter />
 
   </main>
 </template>
@@ -65,6 +65,7 @@ import { ref, onMounted, onUnmounted, inject, computed } from 'vue';
 import nextElementInList from '@/utils/nextElementInLIst';
 import { useI18n } from 'vue-i18n';
 import TopProds from '@/components/TopProds.vue';
+import BigFooter from '@/components/BigFooter.vue';
 
 const { locale } = useI18n();
 const currentLocale = computed(() => locale.value);

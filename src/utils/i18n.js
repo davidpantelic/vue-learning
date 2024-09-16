@@ -6,6 +6,7 @@ const messages = {
   sr: {
     head: {
       title: 'Panić Plast',
+      job: 'Izrada proizvoda od plastike',
       description:
         'Plasticni rezervoari, plasticne septicke jame, plasticni pontoni, plasticne kace, plasticne cevi. Za domacinstva i proizvodnje. Kvalitetno, povoljno, dugotrajno i ekoloski ispravno.'
     },
@@ -34,7 +35,10 @@ const messages = {
       subtitle_2: 'Proizvodi za domacinstva, poljopriveru i drugo',
       subtitle_3: 'Kvalitet i dugotrajnost'
     },
-    top_prods: 'Top 3 proizvoda',
+    top_prods: {
+      title: 'Top 3 proizvoda',
+      button: 'Svi proizvodi'
+    },
     about: {
       about_products: 'O proizvodima',
       our_products: 'Visok kvalitet',
@@ -43,12 +47,17 @@ const messages = {
       transport: 'Prevoz na vasu adresu',
       transport_text:
         'Nudimo vam i prevoz plasticnih proizvoda na vasu adresu. Pored prevoza takodje dobijate i instrukcije kako da montirate ili ukopate rezervoar, septicku jamu ili ponton.'
+    },
+    footer: {
+      webdak: 'Izrada veb-sajtova',
+      rights: 'Sva prava zadrzana.'
     }
   },
   // WEBDAK // // // // /// // / / // /// // /
   en: {
     head: {
       title: 'Panic Plast',
+      job: 'Production of plastic products',
       description:
         'Plastic tanks, plastic septic tanks, plastic pontoons, plastic tubs, plastic pipes. For households and production. High-quality, affordable, long-lasting and environmentally friendly.'
     },
@@ -77,7 +86,10 @@ const messages = {
       subtitle_2: 'Products for home, agriculture, and more',
       subtitle_3: 'Quality and long-lasting'
     },
-    top_prods: 'Top 3 products',
+    top_prods: {
+      title: 'Top 3 products',
+      button: 'All products'
+    },
     about: {
       about_products: 'About products',
       about_products_text:
@@ -88,6 +100,10 @@ const messages = {
       transport: 'Delivery to your address',
       transport_text:
         'We also offer transportation of plastic products to your address. In addition to transportation, you also receive instructions on how to mount or bury a tank, septic tank or pontoon.'
+    },
+    footer: {
+      webdak: 'Website creation',
+      rights: 'All Rights Reserved.'
     }
   }
 }
