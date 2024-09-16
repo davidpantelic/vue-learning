@@ -27,11 +27,13 @@
         <span v-for="index in 3" :key="index" class="w-7 h-[2px] bg-white rounded transition-all duration-300"></span>
       </button>
 
-      <ul :class="{ 'bg-opacity-90': !isScrolling, [!isBurgerOpen ? 'top-[-400%]' : 'top-full']: true }" class="nav-tabs flex flex-col lg:hidden absolute left-0 right-0 px-6 pb-2 items-end gap-3 bg-brand-black transition-all" :aria-hidden="!isBurgerOpen">
-        <li v-for="tab in navTabs" :key="tab.name">
-          <RouterLink :to="tab.path" class="text-xl hover:text-brand-yellow" :tabindex="isBurgerOpen ? 0 : -1" @click="toggleBurger">{{ tab.name }}</RouterLink>
-        </li>
-      </ul>
+      <div class="overflow-hidden absolute top-full left-0 right-0">
+        <ul :class="{ 'bg-opacity-90': !isScrolling, [!isBurgerOpen ? 'translate-y-[-400%]' : 'translate-y-0']: true }" class="nav-tabs flex flex-col lg:hidden px-6 pb-2 items-end gap-3 bg-brand-black transition-all" :aria-hidden="!isBurgerOpen">
+          <li v-for="tab in navTabs" :key="tab.name">
+            <RouterLink :to="tab.path" class="text-xl hover:text-brand-yellow" :tabindex="isBurgerOpen ? 0 : -1" @click="toggleBurger">{{ tab.name }}</RouterLink>
+          </li>
+        </ul>
+      </div>
 
     </nav>
   </header>
