@@ -28,7 +28,7 @@
       </button>
 
       <div class="overflow-hidden absolute top-full left-0 right-0">
-        <ul :class="{ 'bg-opacity-90': !isScrolling, [!isBurgerOpen ? 'translate-y-[-400%]' : 'translate-y-0']: true }" class="nav-tabs flex flex-col lg:hidden px-6 pb-2 items-end gap-3 bg-brand-black transition-all" :aria-hidden="!isBurgerOpen">
+        <ul :class="{ 'bg-opacity-90': !isScrolling, [!isBurgerOpen ? 'translate-y-[-100%]' : 'translate-y-0']: true }" class="nav-tabs flex flex-col lg:hidden px-6 pb-2 items-end gap-3 bg-brand-black transition-all" :aria-hidden="!isBurgerOpen">
           <li v-for="tab in navTabs" :key="tab.name">
             <RouterLink :to="tab.path" class="text-xl hover:text-brand-yellow" :tabindex="isBurgerOpen ? 0 : -1" @click="toggleBurger">{{ tab.name }}</RouterLink>
           </li>
