@@ -12,8 +12,7 @@
         <p>{{ t('footer.webdak') }} - <a href="mailto:dpdavid156@gmail.com" class="hover:underline">Webdak</a></p>
       </div>
       <div class="w-1/2 py-10 px-[5%]">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque aperiam explicabo rerum itaque, saepe tempore doloribus reiciendis labore maiores exercitationem consequatur pariatur odit nostrum eaque sapiente aut numquam. Praesentium, eveniet!
-        Ab velit voluptate ex laudantium blanditiis, cumque tenetur excepturi sapiente obcaecati, corporis a totam rerum ipsa atque dolorem quis iste sit ipsam non alias saepe. Magnam harum voluptas nihil cumque.
+        <ContactForm />
       </div>
     </div>
   </footer>
@@ -22,6 +21,7 @@
 <script setup>
 import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
+import ContactForm from './ContactForm.vue';
 
 const { t } = useI18n();
 

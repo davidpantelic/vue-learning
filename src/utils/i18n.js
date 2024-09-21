@@ -51,6 +51,17 @@ const messages = {
     footer: {
       webdak: 'Izrada veb-sajtova',
       rights: 'Sva prava zadrzana.'
+    },
+    form: {
+      title: 'Posaljite nam poruku',
+      name: 'Ime',
+      message: 'Poruka',
+      submit: 'Posalji',
+      success: 'Uspesno ste poslali poruku!',
+      required: 'Ovo polje je obavezno',
+      required_email: 'Ispravan email je obavezan',
+      required_word: 'obavezno polje',
+      optional_word: 'opciono polje'
     }
   },
   // WEBDAK // // // // /// // / / // /// // /
@@ -104,6 +115,17 @@ const messages = {
     footer: {
       webdak: 'Website creation',
       rights: 'All Rights Reserved.'
+    },
+    form: {
+      title: 'Send us a message',
+      name: 'Name',
+      message: 'Message',
+      submit: 'Submit',
+      success: 'Your message is sent successfully!',
+      required: 'This field is required',
+      required_email: 'A valid email is required',
+      required_word: 'required field',
+      optional_word: 'optional field'
     }
   }
 }

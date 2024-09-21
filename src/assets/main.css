@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  outline-offset: 5px;
+}
+
 html {
   scroll-padding-top: 100px;
 }
@@ -33,11 +37,11 @@ a {
   text-underline-offset: 3px;
 }
 
-a.btn {
-  @apply bg-brand-yellow text-brand-black hover:bg-brand-black hover:text-brand-yellow py-2 px-8 rounded-full my-5 transition-all duration-300 border-brand-yellow border-2 text-xl;
+.btn {
+  @apply bg-brand-yellow text-brand-black hover:bg-brand-black hover:text-brand-yellow py-2 px-8 rounded my-5 transition-all duration-300 border-brand-yellow border-2 text-xl;
 }
 
-a.btn-1 {
+.btn-1 {
   @apply bg-brand-black text-brand-yellow border-brand-black hover:bg-brand-yellow hover:text-brand-black;
 }
 
@@ -111,3 +115,26 @@ div.prod-desc > div {
   box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.7);
   background-attachment: fixed;
 }
+
+/* form */
+.ada-form {
+  @apply max-w-96;
+}
+
+.ada-form label {
+  @apply mb-1 text-base sm:text-lg lg:text-xl my-1;
+}
+
+.ada-form label span {
+  @apply text-red-500;
+}
+
+.ada-form :is(input, select, textarea) {
+  @apply text-black rounded-md mb-3 p-1 block w-full mt-1;
+}
+
+.ada-form textarea {
+  @apply min-h-20;
+  position: relative;
+}
+/* form end */
