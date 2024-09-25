@@ -1,7 +1,7 @@
 <template>
-  <footer class="bg-brand-black text-brand-yellow w-full">
-    <div class="flex">
-      <div class="w-1/2 py-10 px-[5%] text-center">
+  <footer class="bg-brand-green text-brand-black w-full">
+    <div id="kontakt" class="flex lg:flex-wrap flex-col lg:flex-row justify-center items-center gap-x-[5%] gap-y-5 p-10">
+      <div class="text-center">
         <h2>{{ t('head.title') }}</h2>
         <h3>{{ t('head.job') }}</h3>
         <br>
@@ -11,9 +11,10 @@
         <p>Copyright &copy; {{ getCurrentYear }} {{ t('head.title') }}. {{ t('footer.rights') }}</p>
         <p>{{ t('footer.webdak') }} - <a href="mailto:dpdavid156@gmail.com" class="hover:underline">Webdak</a></p>
       </div>
-      <div class="w-1/2 py-10 px-[5%]">
-        <ContactForm />
-      </div>
+
+      <ContactForm class="w-full xl:w-1/3 m-5 lg:m-0" />
+
+      <img src="@/assets/images/panic_plast.png" :alt="[t('head.title'), t('head.job')]" class="max-h-80 lg:max-h-96 max-w-full">
     </div>
   </footer>
 </template>

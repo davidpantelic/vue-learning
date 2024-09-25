@@ -1,5 +1,5 @@
 <template>
-  <div class="ada-form border-2 rounded-lg p-5">
+  <div class="ada-form border-2 border-brand-black rounded-lg p-5">
     <h2 class="mb-5">{{ t('form.title') }}</h2>
     <form @submit.prevent="submitForm" novalidate>
 
@@ -21,10 +21,10 @@
         </label>
       </div>
 
-      <button class="btn w-full !rounded-md" type="submit">{{ t('form.submit') }}</button>
+      <button class="btn-2 w-full !rounded-md" type="submit">{{ t('form.submit') }}</button>
 
       <!-- Display a success message if the form is submitted successfully -->
-      <p v-if="successMessage" class="text-green-500 mt-2">{{ successMessage }}</p>
+      <p v-if="successMessage">{{ successMessage }}</p>
     </form>
   </div>
 </template>

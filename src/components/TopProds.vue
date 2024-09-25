@@ -14,7 +14,7 @@
       <h3>{{ products['psj'].name }}</h3>
     </RouterLink>
   </div>
-  <RouterLink :to="t('nav.products').toLowerCase()" class="btn btn-1 block w-fit mx-auto !mb-8">{{ t('top_prods.button') }}</RouterLink>
+  <RouterLink :to="t('nav.products').toLowerCase()" class="btn-2 block w-fit mx-auto !mb-10" active-class="" exact-active-class="">{{ t('top_prods.button') }}</RouterLink>
 </template>
 
 <script setup>

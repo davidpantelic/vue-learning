@@ -8,7 +8,8 @@
 }
 
 html {
-  scroll-padding-top: 100px;
+  scroll-padding-top: 60px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -37,11 +38,15 @@ a {
   text-underline-offset: 3px;
 }
 
-.btn {
-  @apply bg-brand-yellow text-brand-black hover:bg-brand-black hover:text-brand-yellow py-2 px-8 rounded my-5 transition-all duration-300 border-brand-yellow border-2 text-xl;
+[class^='btn-'] {
+  @apply py-2 px-8 rounded my-5 transition-all duration-300 border-2 text-xl;
 }
 
 .btn-1 {
+  @apply bg-brand-yellow text-brand-black border-brand-yellow hover:bg-brand-black hover:text-brand-yellow;
+}
+
+.btn-2 {
   @apply bg-brand-black text-brand-yellow border-brand-black hover:bg-brand-yellow hover:text-brand-black;
 }
 
@@ -126,11 +131,11 @@ div.prod-desc > div {
 }
 
 .ada-form label span {
-  @apply text-red-500;
+  @apply text-red-900;
 }
 
 .ada-form :is(input, select, textarea) {
-  @apply text-black rounded-md mb-3 p-1 block w-full mt-1;
+  @apply text-black bg-brand-yellow rounded-md mb-3 p-2 block w-full mt-1 border-2 border-brand-black;
 }
 
 .ada-form textarea {
